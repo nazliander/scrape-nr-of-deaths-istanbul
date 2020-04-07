@@ -80,3 +80,6 @@ spark-warehouse/
 # Archive files
 /archive/
 /jnbs/
+
+# No .csv files
+*.csv
