@@ -2,10 +2,10 @@
 
 A scraper and simple time series analysis example with Selenium and Seaborn.
 
-To build:
+To build the Selenium scraper:
 
 ```docker build . -t istanbul-covid```
 
-To run:
+To run it:
 
 ```docker run istanbul-covid```

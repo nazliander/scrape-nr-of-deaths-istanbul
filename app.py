@@ -8,17 +8,16 @@ URL = "https://www.turkiye.gov.tr/istanbul-buyuksehir-belediyesi-vefat-sorgulama
 LOGGER = set_logger("istanbul_stats_app")
 
 dates = get_dates(date_path="./data/dates_deaths.csv")
-missing_dates = dates.loc[dates.numbers != "None", "dates"].values
-
-BATCH = deepcopy(missing_dates[100:103])
+missing_dates = dates.loc[dates.numbers == "None", "dates"].values
 
 
 def app() -> None:
     process_finished = False
     dates_deaths_dict = {}
     chrome_options = set_chrome_options()
+    batch = deepcopy(missing_dates[100:150])
     while process_finished is False:
-        for d in BATCH:
+        for d in batch:
             time.sleep(1)
             LOGGER.info(d)
             dates_deaths_dict[d] = take_death_number(
