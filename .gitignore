@@ -83,3 +83,6 @@ spark-warehouse/
 
 # No .csv files
 *.csv
+
+# No charts
+*.png
