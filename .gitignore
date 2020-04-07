@@ -1,0 +1,85 @@
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# pyenv
+.python-version
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Jetbrains IDE
+.idea/
+
+# VSCode
+.bloop/
+.metals/
+.vscode/
+
+# MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
+
+target/
+
+# Spark test resources crc files
+src/test/resources/**/_SUCCESS
+src/test/resources/**/*.crc
+
+*log
+
+# Spark related
+_checkpoint/
+spark-warehouse/
+
+# No DB files
+*.db
+
+# Localstack data
+.Localstack
+
+# Visualization data
+./vis-data/*
+
+# IntelliJ
+*.iml
+
+# Archive files
+/archive/
+/jnbs/
+
+# No .csv files
+*.csv
