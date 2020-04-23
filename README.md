@@ -1,4 +1,4 @@
-# Visualize # of Deaths in Istanbul to Understand Shock Effects of COVID-19
+# A Scraper to Collect Daily # of Deaths in Istanbul
 
 ## Scraper Installation and Re-use Instructions
 
@@ -17,4 +17,3 @@ Requirements:
 `./data/` must contain a .csv file with days and number of deaths with `\t` separated and without a header. From this repository, we do not share the dataset.
 
 `./__logger/` folder must be created before running the docker commands.
-
