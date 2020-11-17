@@ -1,2 +1,5 @@
+pandas==1.1.2
+prompt_toolkit==1.0.14
+regex==2020.11.13
+PyInquirer==1.0.3
 selenium==3.141.0
-pandas==1.0.3
