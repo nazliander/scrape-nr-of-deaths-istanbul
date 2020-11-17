@@ -10,15 +10,6 @@ from custom_logger import set_logger
 LOGGER = set_logger("selenium_stats")
 
 
-def get_dates(date_path: str) -> pd.DataFrame:
-    """Reads the dates dataframe with two columns.
-    """
-    dates = pd.read_csv(
-        date_path, sep="\t", header=None)
-    dates.columns = ["dates", "numbers"]
-    return dates
-
-
 def get_death_from_record(record: str) -> str:
     """In the records, the second word implies the total number of
     deaths in a given day.

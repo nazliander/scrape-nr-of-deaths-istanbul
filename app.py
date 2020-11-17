@@ -1,21 +1,22 @@
 from copy import deepcopy
 import time
+import pandas as pd
 
-from helpers import get_dates, set_chrome_options, take_death_number, get_death_from_record
+from helpers import set_chrome_options, take_death_number, get_death_from_record
+from inquirer import question_the_user
 from custom_logger import set_logger
 
 URL = "https://www.turkiye.gov.tr/istanbul-buyuksehir-belediyesi-vefat-sorgulama"
 LOGGER = set_logger("istanbul_stats_app")
 
-dates = get_dates(date_path="./data/dates_deaths.csv")
-missing_dates = dates.loc[dates.numbers == "None", "dates"].values
+dates = question_the_user()
 
 
 def app() -> None:
     process_finished = False
     dates_deaths_dict = {}
     chrome_options = set_chrome_options()
-    batch = deepcopy(missing_dates)
+    batch = deepcopy(dates)
     while process_finished is False:
         for d in batch:
             time.sleep(1)
