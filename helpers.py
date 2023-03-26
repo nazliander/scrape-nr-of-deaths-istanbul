@@ -1,16 +1,17 @@
-from selenium.webdriver.chrome.options import Options
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 import time
+from typing import Optional
+
 import pandas as pd
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.keys import Keys
 
 from custom_logger import set_logger
-
 
 LOGGER = set_logger("selenium_stats")
 
 
-def get_death_from_record(record: str) -> str:
+def get_death_from_record(record: str) -> Optional[str]:
     """In the records, the second word implies the total number of
     deaths in a given day.
     """
@@ -20,7 +21,7 @@ def get_death_from_record(record: str) -> str:
         return None
 
 
-def set_chrome_options() -> None:
+def set_chrome_options() -> Options:
     """Sets chrome options for Selenium.
     Chrome options for headless browser is enabled.
     """
@@ -36,7 +37,7 @@ def set_chrome_options() -> None:
 
 def take_death_number(date_str: str,
                       chrome_options: Options,
-                      url: str) -> str:
+                      url: str) -> Optional[str]:
     """Main function of the scraper.
     Takes the death numbers from the given webpage for
     official statistics.
